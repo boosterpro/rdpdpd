@@ -29,5 +29,5 @@ jobs:
     - name: Set Admin Password
       run: Set-LocalUser -Name "runneradmin" -Password (ConvertTo-SecureString -AsPlainText "P@ssw0rd!" -Force)
 
-    - name: Create Tunnel
-      run: .\ngrok\ngrok.exe tcp 3389
+    - name: Create HTTP Tunnel
+      run: .\ngrok\ngrok.exe http 3389
